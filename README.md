@@ -407,37 +407,10 @@ All endpoints are prefixed with `/api`. Authentication-required endpoints use a 
 
 ### Database
 - **Schema**:
-  - `users` table: `id`, `name`, `email`, `password`, `city` (nullable), `api_token`, `email_verified_at`, `remember_token`, `created_at`, `updated_at`.
+  - `users` table: `id`, `name`, `email`, `password`, `city`, `api_token`, `email_verified_at`, `remember_token`, `created_at`, `updated_at`.
 - **Migration**:
   ```bash
   php artisan migrate
-  ```
-- **Add City Field** (if not present):
-  ```bash
-  php artisan make:migration add_city_to_users_table --table=users
-  ```
-  Migration file:
-  ```php
-  use Illuminate\Database\Migrations\Migration;
-  use Illuminate\Database\Schema\Blueprint;
-  use Illuminate\Support\Facades\Schema;
-
-  class AddCityToUsersTable extends Migration
-  {
-      public function up()
-      {
-          Schema::table('users', function (Blueprint $table) {
-              $table->string('city')->nullable()->after('email');
-          });
-      }
-
-      public function down()
-      {
-          Schema::table('users', function (Blueprint $table) {
-              $table->dropColumn('city');
-          });
-      }
-  }
   ```
 
 ## Error Handling
