@@ -1,7 +1,7 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "Task Management API",
+        "title": "Weather Consumption API",
         "description": "API for managing users and fetching weather data with JWTAuth",
         "contact": {
             "email": "josemarndungue@gmail.com"

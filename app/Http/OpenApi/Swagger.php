@@ -3,7 +3,7 @@ namespace App\Http\OpenApi;
 
 /**
  * @OA\Info(
- *     title="Task Management API",
+ *     title="Weather Consumption API",
  *     version="1.0.0",
  *     description="API for managing users and fetching weather data with JWTAuth",
  *     @OA\Contact(
